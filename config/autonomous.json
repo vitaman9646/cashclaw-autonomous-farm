@@ -1,0 +1,62 @@
+{
+  "enabled": true,
+  
+  "autoScaling": {
+    "enabled": true,
+    "minProfit": 0.05,        // Min profit to clone (ETH)
+    "minWinRate": 60,         // Min win rate to clone (%)
+    "maxAgentsPerVPS": 8,     // Don't exceed this
+    "scaleInterval": "weekly" // How often to check
+  },
+  
+  "autoOptimization": {
+    "enabled": true,
+    "removeUnprofitable": true,
+    "unprofitableThreshold": -0.005,
+    "lowWinRateThreshold": 25,
+    "minSampleSize": 20       // Min tasks before decision
+  },
+  
+  "nicheDiscovery": {
+    "enabled": true,
+    "checkInterval": "weekly",
+    "minMarketSize": 50,      // Min tasks per week
+    "maxCompetition": 5,      // Max competitors
+    "testBudget": 0.01        // ETH to spend testing
+  },
+  
+  "marketExpansion": {
+    "enabled": false,         // Disabled by default
+    "upworkAPI": false,
+    "fiverrAPI": false,
+    "bounties": true
+  },
+  
+  "autoWithdrawal": {
+    "enabled": true,
+    "threshold": 0.1,         // Auto-withdraw when > 0.1 ETH
+    "targetWallet": "0x...",
+    "keepReserve": 0.005      // Keep for gas
+  },
+  
+  "notifications": {
+    "dailyReport": true,
+    "weeklyReport": true,
+    "actionAlerts": true,
+    "approvalRequired": {
+      "newVPS": true,
+      "marketExpansion": true,
+      "largeWithdrawal": true  // > 1 ETH
+    }
+  },
+  
+  "safety": {
+    "maxDailySpend": 10,      // USD
+    "maxAgents": 50,
+    "emergencyStop": {
+      "enabled": true,
+      "profitDropThreshold": -0.1,
+      "winRateDropThreshold": 20
+    }
+  }
+}
