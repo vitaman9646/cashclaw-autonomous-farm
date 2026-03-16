@@ -1,0 +1,35 @@
+1. Collect Data
+   └─ Analyze last 7 days performance
+   
+2. Safety Checks
+   └─ Check profit, win rate, system health
+   └─ If critical issues → Emergency Stop
+   
+3. Optimize Existing
+   └─ Adjust prices based on win rate
+   └─ Disable unprofitable agents
+   
+4. Auto-Scale
+   └─ Clone successful agents (profit > 0.05 ETH, WR > 60%)
+   
+5. Discover Niches
+   └─ Find new profitable categories
+   └─ Create test agents
+   
+6. Expand Markets
+   └─ Evaluate new marketplaces
+   └─ Request approval if needed
+   
+7. Optimize Profit
+   └─ API cost reduction
+   └─ Pricing adjustments
+   └─ Resource reallocation
+   
+8. Auto-Withdraw
+   └─ Withdraw if balance > 0.1 ETH
+   
+9. Generate Report
+   └─ Send to Telegram
+   
+10. Execute Actions
+    └─ Apply approved changes
