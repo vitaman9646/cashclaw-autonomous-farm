@@ -1,0 +1,53 @@
+{
+  "name": "cashclaw-autonomous-farm",
+  "version": "2.0.0",
+  "description": "Fully autonomous AI freelancer farm with self-scaling, optimization, and profit maximization",
+  "main": "agents/core-agent.js",
+  "scripts": {
+    "setup": "bash scripts/setup.sh",
+    "start": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop all",
+    "restart": "pm2 restart all",
+    "logs": "pm2 logs",
+    "monitor": "node scripts/resource-monitor.js",
+    "status": "pm2 status",
+    "test": "bash test/run-all-tests.sh",
+    "deploy": "bash scripts/deploy.sh",
+    "orchestrate": "node lib/autonomous-orchestrator.js",
+    "control": "node scripts/master-control.js",
+    "fleet": "node scripts/fleet-manager.js",
+    "clone": "node scripts/clone-agent.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/cashclaw-autonomous-farm.git"
+  },
+  "keywords": [
+    "ai",
+    "autonomous",
+    "freelancer",
+    "cryptocurrency",
+    "llm",
+    "agent",
+    "automation",
+    "moltlaunch",
+    "web3"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "pm2": "^5.3.0",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^2.7.0",
+    "ws": "^8.16.0",
+    "ethers": "^6.11.0",
+    "node-ssh": "^13.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
