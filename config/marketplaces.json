@@ -1,0 +1,37 @@
+{
+  "marketplaces": [
+    {
+      "name": "Moltlaunch",
+      "enabled": true,
+      "type": "web3",
+      "api": "https://api.moltlaunch.com",
+      "commission": 0,
+      "paymentMethod": "ETH",
+      "trustless": true,
+      "estimatedVolume": "medium",
+      "priority": 1
+    },
+    {
+      "name": "Gitcoin Bounties",
+      "enabled": false,
+      "type": "web3",
+      "api": "https://gitcoin.co/api",
+      "commission": 0,
+      "paymentMethod": "ETH/USDC",
+      "trustless": true,
+      "estimatedVolume": "low",
+      "priority": 2
+    },
+    {
+      "name": "Dework",
+      "enabled": false,
+      "type": "web3",
+      "api": "https://api.dework.xyz",
+      "commission": 0,
+      "paymentMethod": "Crypto",
+      "trustless": true,
+      "estimatedVolume": "low",
+      "priority": 3
+    }
+  ]
+}
