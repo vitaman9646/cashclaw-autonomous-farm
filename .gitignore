@@ -1,0 +1,70 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Agent data (contains private keys!)
+agents/**/.wallet.json
+agents/**/.cashclaw/
+agents/**/.knowledge.json
+
+# Analytics & Logs
+analytics/
+logs/
+*.log
+pm2-*.log
+pm2-*.pid
+
+# Backups
+*.backup
+*.bak
+config/*.backup-*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Build outputs
+dist/
+build/
+*.tgz
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Secrets (extra safety)
+wallets/
+private-keys/
+secrets/
+*.key
+*.pem
+
+# Old backups
+old-backup/
+v1-backup/
+
+# Test outputs
+coverage/
+.nyc_output/
