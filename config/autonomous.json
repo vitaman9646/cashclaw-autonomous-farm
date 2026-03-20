@@ -1,62 +1,40 @@
 {
   "enabled": true,
-  
+  "orchestratorSchedule": "0 3 * * *",
   "autoScaling": {
-    "enabled": true,
-    "minProfit": 0.05,        // Min profit to clone (ETH)
-    "minWinRate": 60,         // Min win rate to clone (%)
-    "maxAgentsPerVPS": 8,     // Don't exceed this
-    "scaleInterval": "weekly" // How often to check
+    "enabled": false,
+    "minAgents": 1,
+    "maxAgents": 10,
+    "scaleUpThreshold": 0.8,
+    "scaleDownThreshold": 0.3,
+    "cooldownPeriod": 3600000
   },
-  
-  "autoOptimization": {
-    "enabled": true,
-    "removeUnprofitable": true,
-    "unprofitableThreshold": -0.005,
-    "lowWinRateThreshold": 25,
-    "minSampleSize": 20       // Min tasks before decision
-  },
-  
   "nicheDiscovery": {
-    "enabled": true,
-    "checkInterval": "weekly",
-    "minMarketSize": 50,      // Min tasks per week
-    "maxCompetition": 5,      // Max competitors
-    "testBudget": 0.01        // ETH to spend testing
+    "enabled": false,
+    "checkInterval": 604800000,
+    "minSampleSize": 20,
+    "profitabilityThreshold": 1.5
   },
-  
   "marketExpansion": {
-    "enabled": false,         // Disabled by default
-    "upworkAPI": false,
-    "fiverrAPI": false,
-    "bounties": true
+    "enabled": false,
+    "checkInterval": 2592000000,
+    "minSuccessRate": 0.6
   },
-  
-  "autoWithdrawal": {
+  "profitOptimization": {
     "enabled": true,
-    "threshold": 0.1,         // Auto-withdraw when > 0.1 ETH
-    "targetWallet": "0x...",
-    "keepReserve": 0.005      // Keep for gas
+    "checkInterval": 86400000,
+    "targetMargin": 0.4,
+    "minMargin": 0.2
   },
-  
-  "notifications": {
+  "emergencyStop": {
+    "enabled": false,
+    "winRateDropThreshold": 0,
+    "errorRateThreshold": 0.95,
+    "fundsTooLowUSD": 1
+  },
+  "reporting": {
     "dailyReport": true,
     "weeklyReport": true,
-    "actionAlerts": true,
-    "approvalRequired": {
-      "newVPS": true,
-      "marketExpansion": true,
-      "largeWithdrawal": true  // > 1 ETH
-    }
-  },
-  
-  "safety": {
-    "maxDailySpend": 10,      // USD
-    "maxAgents": 50,
-    "emergencyStop": {
-      "enabled": true,
-      "profitDropThreshold": -0.1,
-      "winRateDropThreshold": 20
-    }
+    "monthlyReport": true
   }
 }
