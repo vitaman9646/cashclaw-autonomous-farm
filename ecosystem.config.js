@@ -73,3 +73,11 @@ apps.push({
 });
 
 module.exports = { apps };
+
+apps.push({
+  name: 'webhook-server',
+  script: './lib/webhook-server.js',
+  env: {
+    PORT: 3000
+  }
+});
